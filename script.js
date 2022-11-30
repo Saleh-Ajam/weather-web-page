@@ -25,8 +25,10 @@ let weather = {
     document.querySelector(".wind").innerText =
       "Wind speed: " + speed + " km/h";
     document.querySelector(".weather").classList.remove("loading");
+    // document.body.style.backgroundImage =
+    //   "url('https://api.unsplash.com/search/photos?query='" + name + "')";
     document.body.style.backgroundImage =
-      "url('https://api.unsplash.com/search/photos?query='" + name + "')";
+      "url('https://picsum.photos/1600/900')";
   },
   search: function () {
     this.fetchWeather(document.querySelector(".search-bar").value);
