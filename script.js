@@ -47,4 +47,19 @@ document
   });
 
 // The Hypothetical location
-weather.fetchWeather("Aleppo");
+
+function fetchWeatherByCurrentLocation(lat, lon) {
+  fetch(
+    `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${weather.apiKey}`
+  )
+    .then((res) => res.json())
+    .then((data) => weather.displayWeather(data));
+}
+navigator.geolocation.getCurrentPosition(
+  (res) => {
+    fetchWeatherByCurrentLocation(res.coords.latitude, res.coords.longitude);
+  },
+  (err) => {
+    weather.fetchWeather("Aleppo");
+  }
+);
