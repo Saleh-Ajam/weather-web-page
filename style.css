@@ -6,7 +6,6 @@ body {
   margin: 0;
   font-family: "Roboto Slab", serif;
   background: #222;
-  background-image: url("https://picsum.photos/1600/900");
   background-size: 100% auto;
   font-size: 120%;
 }
@@ -91,16 +90,6 @@ div.temp {
   body {
     display: inline-grid;
     padding-left: 1em;
-  }
-  @media only screen and (max-height: 800px) {
-    body {
-      background-image: url("https://picsum.photos/450/800");
-    }
-  }
-  @media only screen and (max-height: 1000px) {
-    body {
-      background-image: url("https://picsum.photos/450/1000");
-    }
   }
 }
 @media only screen and (max-width: 280px) {
